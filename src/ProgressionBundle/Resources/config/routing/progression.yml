@@ -1,0 +1,24 @@
+progression_index:
+    path:     /
+    defaults: { _controller: "ProgressionBundle:progression:index" }
+    methods:  GET
+
+progression_show:
+    path:     /{id}/show
+    defaults: { _controller: "ProgressionBundle:progression:show" }
+    methods:  GET
+
+progression_new:
+    path:     /new
+    defaults: { _controller: "ProgressionBundle:progression:new" }
+    methods:  [GET, POST]
+
+progression_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ProgressionBundle:progression:edit" }
+    methods:  [GET, POST]
+
+progression_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ProgressionBundle:progression:delete" }
+    methods:  DELETE

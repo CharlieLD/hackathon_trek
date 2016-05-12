@@ -24,7 +24,7 @@ class CircuitController extends Controller
 
         $circuits = $em->getRepository('CircuitBundle:Circuit')->findAll();
 
-        return $this->render('circuit/index.html.twig', array(
+        return $this->render('CircuitBundle:circuit:index.html.twig', array(
             'circuits' => $circuits,
         ));
     }
@@ -47,7 +47,7 @@ class CircuitController extends Controller
             return $this->redirectToRoute('circuit_show', array('id' => $circuit->getId()));
         }
 
-        return $this->render('circuit/new.html.twig', array(
+        return $this->render('CircuitBundle:circuit:new.html.twig', array(
             'circuit' => $circuit,
             'form' => $form->createView(),
         ));
@@ -61,7 +61,7 @@ class CircuitController extends Controller
     {
         $deleteForm = $this->createDeleteForm($circuit);
 
-        return $this->render('circuit/show.html.twig', array(
+        return $this->render('CircuitBundle:circuit:show.html.twig', array(
             'circuit' => $circuit,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -85,7 +85,7 @@ class CircuitController extends Controller
             return $this->redirectToRoute('circuit_edit', array('id' => $circuit->getId()));
         }
 
-        return $this->render('circuit/edit.html.twig', array(
+        return $this->render('CircuitBundle:circuit:edit.html.twig', array(
             'circuit' => $circuit,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

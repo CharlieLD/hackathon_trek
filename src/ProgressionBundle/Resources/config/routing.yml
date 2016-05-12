@@ -1,3 +1,4 @@
-progression_homepage:
-    path:     /
-    defaults: { _controller: ProgressionBundle:Default:index }
+progression_progression:
+    resource: "@ProgressionBundle/Resources/config/routing/progression.yml"
+    prefix:   /progression
+

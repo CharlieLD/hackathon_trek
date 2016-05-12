@@ -1,7 +1,25 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <div class="nav_header" xmlns="http://www.w3.org/1999/html">
+        <nav>
+            <ul>
+                <li><a href="{{ path("homepage") }}" title="Télécharger">Accueil</a></li>
+                <li><a href="{{ path("circuit_index") }}" title="Télécharger">Circuit</a></li>
+                <li><a href="{{ path("progression_index") }}" title="Télécharger">Parcours</a></li>
+                <li><a href="{{ path("homepage") }}" title="Télécharger">Connexion</a></li>
+            </ul>
+        </nav>
+    </div>
     <h1>Circuit list</h1>
+
+
+    <div id="map">
+    </div>
+
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg1xFdFYyk1E5Sa5Oxayr9pPCCfDTM5h8&callback=initMap">
+    </script>
 
     <table>
         <thead>
