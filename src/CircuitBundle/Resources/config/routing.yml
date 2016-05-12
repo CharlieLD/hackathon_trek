@@ -2,6 +2,3 @@ circuit_circuit:
     resource: "@CircuitBundle/Resources/config/routing/circuit.yml"
     prefix:   /circuit
 
-circuit_homepage:
-    path:     /
-    defaults: { _controller: CircuitBundle:Default:index }

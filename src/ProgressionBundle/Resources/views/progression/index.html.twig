@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="nav_header" xmlns="http://www.w3.org/1999/html">
+        <nav>
+            <ul>
+                <li><a href="{{ path("homepage") }}" title="Télécharger">Accueil</a></li>
+                <li><a href="{{ path("circuit_index") }}" title="Télécharger">Circuit</a></li>
+                <li><a href="{{ path("progression_index") }}" title="Télécharger">Parcours</a></li>
+                <li><a href="{{ path("homepage") }}" title="Télécharger">Connexion</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h1>progression list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Statistiques</th>
+                <th>Recompenses</th>
+                <th>Badges</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for progression in progressions %}
+            <tr>
+                <td><a href="{{ path('progression_show', { 'id': progression.id }) }}">{{ progression.id }}</a></td>
+                <td>{{ progression.statistiques }}</td>
+                <td>{{ progression.recompenses }}</td>
+                <td>{{ progression.badges }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('progression_show', { 'id': progression.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('progression_edit', { 'id': progression.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('progression_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}
