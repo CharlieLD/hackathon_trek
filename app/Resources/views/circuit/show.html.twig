@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Circuit</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ circuit.id }}</td>
+            </tr>
+            <tr>
+                <th>Randonnees</th>
+                <td>{{ circuit.randonnees }}</td>
+            </tr>
+            <tr>
+                <th>Velos</th>
+                <td>{{ circuit.velos }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('circuit_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('circuit_edit', { 'id': circuit.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
