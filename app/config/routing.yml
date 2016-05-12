@@ -13,3 +13,15 @@ app:
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+user_login:
+    path:    /login
+    defaults: { _controller: AppBundle:Security:login}
+
+user_login_check:
+    path:    /login/check
+    defaults: { _controller: AppBundle:Security:check}
+
+homepage:
+    path:    /
+    defaults: { _controller: AppBundle:Default:index}

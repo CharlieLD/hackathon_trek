@@ -10,15 +10,41 @@
                 <li><a href="{{ path("homepage") }}" title="Télécharger">Accueil</a></li>
                 <li><a href="{{ path("circuit_index") }}" title="Télécharger">Circuit</a></li>
                 <li><a href="{{ path("progression_index") }}" title="Télécharger">Parcours</a></li>
-                <li><a href="{{ path("homepage") }}" title="Télécharger">Connexion</a></li>
+                <li><a href="{{ path("user_login") }}" title="Télécharger">Connexion</a></li>
             </ul>
         </nav>
     </div>
 
     <!-- Fin barnav principale -->
 
-    <!--      -->
+    <!-- animation 3d -->
 
+    <div class="rotate">
+        <div id="screen">
+            <div id="cube" class='cube'>
+                <!-- cube images -->
+                <img id="1" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQHkZZTs1Vwbw38-QSnHDcIXKFXuD0IgOcUmKZSLhuLIxLDm0rA" class='face' data-transform="translateZ(-400px)" style="outline:none !important">
+                <img id="2" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQKkCMKsptPkWWJT16FVxgygotAjLqtLtfwvLvO6_qncPvd3x3nTw" class='face' data-transform="rotateY(90deg) translateZ(-400px)">
+                <img id="3" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRLfi-Ghd0DSA01w8GfUJ0IcQAO-_-iU-qj3r6WJgq39TorjzFX"  class='face' data-transform="rotateY(-90deg) translateZ(-400px)">
+                <img id="4" src="http://images.google.fr/imgres?imgurl=http%3A%2F%2Ffit-innov.com%2Fwp-content%2Fuploads%2F2016%2F03%2Ffond_ecran_wallpaper_serie_02769-520x245.jpg&imgrefurl=http%3A%2F%2Ffit-innov.com%2Fpage%2F3%2F&h=245&w=520&tbnid=a7VEhc37OM7bBM%3A&docid=NoNtGUn4ncqOqM&ei=8PU0V5mcM4Sla87OveAC&tbm=isch&client=ubuntu&iact=rc&uact=3&dur=618&page=6&start=93&ndsp=19&ved=0ahUKEwiZ1IjuvdXMAhWE0hoKHU5nDyw4ZBAzCBcoCjAK&bih=617&biw=1193" class='face' data-transform="rotateY(180deg) translateZ(-400px)">
+                <img id="5" src="https://i.ytimg.com/vi/Zq0nZSucZsc/maxresdefault.jpg" class='face' data-transform="rotateX(90deg) translateZ(-300px)">
+                <img id="6" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ8ipwWgIWw4GeE6lewsD9EaU2ZPeXV1xU34sj8b9E8K-TUkUO6"  class='face' data-transform="rotateX(-90deg) translateZ(-300px)">
+                <!-- bonus image -->
+                <img id="7" src="http://images.google.fr/imgres?imgurl=http%3A%2F%2Fstatic.blog4ever.com%2F2014%2F11%2F787065%2Fartfichier_787065_5305562_201511244636790.jpg&imgrefurl=http%3A%2F%2Fwww.commentfaireletourdumondesansperdresafemme.com%2Farticles%2Fusa-2&h=1080&w=1920&tbnid=-b7u-0mHlTzK_M%3A&docid=2mZMpXwPryNE7M&ei=5gI1V_D0GdKba9vymlg&tbm=isch&client=ubuntu&iact=rc&uact=3&dur=805&page=1&start=0&ndsp=15&ved=0ahUKEwjw_4GcytXMAhXSzRoKHVu5BgsQMwgiKAMwAw&bih=617&biw=1193">
+                <!-- buttons -->
+
+                <img src="http://images.google.fr/imgres?imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FYR_OOsPJlgc%2Fmaxresdefault.jpg&imgrefurl=http%3A%2F%2F1080.plus%2FYR_OOsPJlgc.video&h=1080&w=1920&tbnid=JNFCLLzRJ4b8qM%3A&docid=4w9JBKTDDNQDHM&ei=J_Y0V-6_C8TaaqC-hagO&tbm=isch&client=ubuntu&iact=rc&uact=3&dur=1242&page=2&start=13&ndsp=18&ved=0ahUKEwiu7_2HvtXMAhVErRoKHSBfAeUQMwhKKBUwFQ&bih=617&biw=1193" class='face button' alt="7" data-transform="translateY(-80px) translateZ(-340px) scale(0.5)">
+                <img src="http://images.google.fr/imgres?imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FYR_OOsPJlgc%2Fmaxresdefault.jpg&imgrefurl=http%3A%2F%2F1080.plus%2FYR_OOsPJlgc.video&h=1080&w=1920&tbnid=JNFCLLzRJ4b8qM%3A&docid=4w9JBKTDDNQDHM&ei=J_Y0V-6_C8TaaqC-hagO&tbm=isch&client=ubuntu&iact=rc&uact=3&dur=1242&page=2&start=13&ndsp=18&ved=0ahUKEwiu7_2HvtXMAhVErRoKHSBfAeUQMwhKKBUwFQ&bih=617&biw=1193" class='face button' alt="2" data-transform="translateX(-200px) translateY(-80px) translateZ(-340px) scale(0.5)">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxQAi_z_fyHYKHxgE3ibIIoQUWgon2-wLDhAV2XFXpYPr9KTjg"  class='face button' alt="3" data-transform="translateX(200px) translateY(-80px) translateZ(-340px) scale(0.5)">
+                <img src="http://images.google.fr/imgres?imgurl=http%3A%2F%2Ffit-innov.com%2Fwp-content%2Fuploads%2F2016%2F03%2Ffond_ecran_wallpaper_serie_02769-520x245.jpg&imgrefurl=http%3A%2F%2Ffit-innov.com%2Fpage%2F3%2F&h=245&w=520&tbnid=a7VEhc37OM7bBM%3A&docid=NoNtGUn4ncqOqM&ei=8PU0V5mcM4Sla87OveAC&tbm=isch&client=ubuntu&iact=rc&uact=3&dur=618&page=6&start=93&ndsp=19&ved=0ahUKEwiZ1IjuvdXMAhWE0hoKHU5nDyw4ZBAzCBcoCjAK&bih=617&biw=1193" class='face button' alt="4" data-transform="translateY(80px) translateZ(-340px) scale(0.5)">
+                <img src="http://images.google.fr/imgres?imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FhuM6feCnmS4%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DhuM6feCnmS4&h=1080&w=1920&tbnid=_BUirPDUBIgr5M%3A&docid=yDqgsgSzktX_7M&ei=J_Y0V-6_C8TaaqC-hagO&tbm=isch&client=ubuntu&iact=rc&uact=3&dur=493&page=1&start=0&ndsp=13&ved=0ahUKEwiu7_2HvtXMAhVErRoKHSBfAeUQMwggKAIwAg&bih=617&biw=1193" class='face button' alt="5" data-transform="translateX(-200px) translateY(80px) translateZ(-340px) scale(0.5)">
+                <img src="http://images.google.fr/imgres?imgurl=http%3A%2F%2Fimg1.gtsstatic.com%2Fwallpapers%2F1e868e8f866d43af51bd4e5d7d162229_large.jpeg&imgrefurl=http%3A%2F%2Fwww.gentside.com%2Fvtt%2Fwallpaper&h=1080&w=1920&tbnid=ZalIo9Nn5k0ZIM%3A&docid=RcAqJDicnHPKCM&ei=P_U0V_zHCceTarXTreAL&tbm=isch&client=ubuntu&iact=rc&uact=3&dur=741&page=1&start=0&ndsp=13&ved=0ahUKEwi846uZvdXMAhXHiRoKHbVpC7wQMwggKAIwAg&bih=617&biw=1193"  class='face button' alt="6" data-transform="translateX(200px) translateY(80px) translateZ(-340px) scale(0.5)">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- fin animation 3d fin -->
 
 
 
