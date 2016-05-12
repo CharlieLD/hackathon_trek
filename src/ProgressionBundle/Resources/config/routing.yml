@@ -1,0 +1,3 @@
+progression_homepage:
+    path:     /
+    defaults: { _controller: ProgressionBundle:Default:index }

@@ -1,0 +1,22 @@
+AppBundle\Entity\Parcours:
+    type: entity
+    table: parcours
+    repositoryClass: AppBundle\Repository\ParcoursRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        utilisateur:
+            targetEntity: AppBundle\Entity\User
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
+        circuit:
+            targetEntity: CircuitBundle\Entity\Circuit
+            joinColumn:
+                name: circuit_id
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

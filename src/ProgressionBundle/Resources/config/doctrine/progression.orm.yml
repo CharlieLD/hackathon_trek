@@ -1,0 +1,23 @@
+ProgressionBundle\Entity\progression:
+    type: entity
+    table: null
+    repositoryClass: ProgressionBundle\Repository\progressionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        statistiques:
+            type: string
+            length: 255
+        recompenses:
+            type: string
+            length: 255
+            nullable: true
+        badges:
+            type: string
+            length: 255
+            nullable: true
+    lifecycleCallbacks: {  }

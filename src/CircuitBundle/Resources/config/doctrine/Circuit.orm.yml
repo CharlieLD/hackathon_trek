@@ -1,0 +1,18 @@
+CircuitBundle\Entity\Circuit:
+    type: entity
+    table: null
+    repositoryClass: CircuitBundle\Repository\CircuitRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        randonnees:
+            type: string
+            length: 255
+        velos:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
