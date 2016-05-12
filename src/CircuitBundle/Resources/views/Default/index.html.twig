@@ -1,1 +1,105 @@
-Hello World!
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <!-- Début barnav principale -->
+
+    <div class="nav_header" xmlns="http://www.w3.org/1999/html">
+        <nav>
+            <ul>
+                <li><a href="{{ path("homepage") }}" title="Télécharger">Accueil</a></li>
+                <li><a href="{{ path("circuit_homepage ") }}" title="Télécharger">Plat</a></li>
+                <li><a href="{{ path(" progression_homepage  ") }}" title="Télécharger">Soiree</a></li>
+                <li><a href="{{ path("participation_index") }}" title="Télécharger">Participation</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Fin barnav principale -->
+
+    <!-- Début du parralax avec texte et image -->
+
+    <div id="main">
+        <header >
+
+            <!-- Début de l'animation de txt dans header-->
+
+            <div class="body">
+                <<svg width="100%" height="100%" viewBox="30 -50 600 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                    <path id="path">
+                        <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" repeatCount="indefinite"/>
+                    </path>
+                    <text font-size="26" font-family="Montserrat" fill='hsla(36, 95%, 85%, 1)'>
+                        <textPath xlink:href="#path">Welcome everybody to the party Black & Night.
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+
+            <!-- Fin de l'animation de txt dans header -->
+        </header>
+
+        <!-- Début des effets parralax -->
+
+        <div class="container" style="padding-top:100px;padding-bottom:100px">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur sed enim in mollis. Proin molestie libero id congue hendrerit. In hac habitasse platea dictumst. Aenean augue libero, scelerisque id sagittis et, tristique nec ipsum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam congue maximus efficitur. Fusce malesuada, magna eu porttitor fermentum, lorem arcu fermentum mi, porta faucibus lorem mauris sed felis. Curabitur dignissim risus quam, rutrum congue tellus aliquet sit amet. Cras luctus ac lectus non sollicitudin. Sed dolor metus, tempor eleifend orci et, laoreet vulputate orci. </p>
+        </div>
+    </div>
+    </div>
+    <section class="fullwidth">
+        <div class="paralax1" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-bottom-top="background-position: 50% 100px;">
+            <div class="paralaxtext" data-bottom-top=" opacity:0; transform[swing]:scale(0.5) " data-top=" opacity:1; transform[swing]:scale(1) ">
+                <h2 style="color:white"> Food</h2>
+            </div>
+        </div>
+    </section>
+    <div class="container" style="padding-top:100px;padding-bottom:100px">
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur sed enim in mollis. Proin molestie libero id congue hendrerit. In hac habitasse platea dictumst. Aenean augue libero, scelerisque id sagittis et, tristique nec ipsum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam congue maximus efficitur. Fusce malesuada, magna eu porttitor fermentum, lorem arcu fermentum mi, porta faucibus lorem mauris sed felis. Curabitur dignissim risus quam, rutrum congue tellus aliquet sit amet. Cras luctus ac lectus non sollicitudin. Sed dolor metus, tempor eleifend orci et, laoreet vulputate orci. </p>
+    </div>
+    <section class="fullwidth">
+        <div class="paralax2" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-bottom-top="background-position: 50% 100px;">
+            <div class="paralaxtext">
+                <h2 style="color:white" data-bottom-top="letter-spacing: 10px;" data-top="letter-spacing: 20px; "> Cocktails </h2>
+            </div>
+    </section>
+    <div class="container" style="padding-top:100px;padding-bottom:100px">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur sed enim in mollis. Proin molestie libero id congue hendrerit. In hac habitasse platea dictumst. Aenean augue libero, scelerisque id sagittis et, tristique nec ipsum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam congue maximus efficitur. Fusce malesuada, magna eu porttitor fermentum, lorem arcu fermentum mi, porta faucibus lorem mauris sed felis. Curabitur dignissim risus quam, rutrum congue tellus aliquet sit amet. Cras luctus ac lectus non sollicitudin. Sed dolor metus, tempor eleifend orci et, laoreet vulputate orci. </p>
+    </div>
+    <section class="fullwidth">
+        <div class="paralax3" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-bottom-top="background-position: 50% 100px;">
+            <div class="paralaxtext"
+                 data-bottom-top="transform[bounce]:scale(0.5);" data-top="transform[bounce]:scale(1)"
+            >
+                <h2 style="color:white">I REALLY LOVE DANCE </h2>
+            </div>
+    </section>
+    <div class="container" style="padding-top:100px;padding-bottom:100px">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur sed enim in mollis. Proin molestie libero id congue hendrerit. In hac habitasse platea dictumst. Aenean augue libero, scelerisque id sagittis et, tristique nec ipsum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam congue maximus efficitur. Fusce malesuada, magna eu porttitor fermentum, lorem arcu fermentum mi, porta faucibus lorem mauris sed felis. Curabitur dignissim risus quam, rutrum congue tellus aliquet sit amet. Cras luctus ac lectus non sollicitudin. Sed dolor metus, tempor eleifend orci et, laoreet vulputate orci. </p>
+    </div>
+    <br>
+
+    <br> <br> <br>
+    <a target="_blank"> CAROLINE PARTY </a>
+    <br> <br> <br> <br>
+    </div>
+    </div>
+    <!-- Fin des effets parralax -->
+
+    <!-- Appel de script pour le parralax -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://arielbeninca.com/Storage/skrollr.min.js"></script>
+    <script type="text/javascript">var s=skrollr.init({forceHeight:false});</script>
+    <script type="text/javascript" src="{{ asset("js/jquery.min.js") }}"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- Fin appel de script parralax -->
+
+    <!-- Début footer -->
+    <footer>
+        <p>© 2016 Copyright Party Caroline | <strong><span class="diff">Mentions légales</span></strong></p>
+    </footer>
+    <!-- Fin footer -->
+
+
+{% endblock %}
