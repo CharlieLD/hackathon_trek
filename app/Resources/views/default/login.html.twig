@@ -1,0 +1,9 @@
+{%  %}if error}
+<div>{{ error.messageKey|trans (error.messageData, 'security') }}</div>
+{% endif %}
+
+</div>
+<form action="{{ path("user_login_check") }}" method="post">
+    <input type="hidden" name="_csrf_token" value="{{  csrf_token }}"/>
+
+</form>

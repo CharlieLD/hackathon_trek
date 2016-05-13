@@ -7,9 +7,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use CircuitBundle\Entity\Circuit;
 use CircuitBundle\Form\CircuitType;
+use Cmfcmf\OpenWeatherMap;
+use Cmfcmf\OpenWeatherMap\Exception as OWMException;
+use Vendor\autoload;
 
 /**
  * Circuit controller.
+ *
  *
  */
 class CircuitController extends Controller
@@ -24,8 +28,36 @@ class CircuitController extends Controller
 
         $circuits = $em->getRepository('CircuitBundle:Circuit')->findAll();
 
+        // Language of data (try your own language here!):
+        $lang = 'fr';
+
+        // Units (can be 'metric' or 'imperial' [default]):
+        $units = 'metric';
+
+        // Create OpenWeatherMap object.
+        // Don't use caching (take a look into Examples/Cache.php to see how it works).
+        $owm = new OpenWeatherMap('0df17ea554ebe14617d1fd046e544a81');
+
+        try {
+            $weather = $owm->getWeather('Bordeaux', $units, $lang);
+        } catch(OWMException $e) {
+            echo 'OpenWeatherMap exception: ' . $e->getMessage() . ' (Code ' . $e->getCode() . ').';
+        } catch(\Exception $e) {
+            echo 'General exception: ' . $e->getMessage() . ' (Code ' . $e->getCode() . ').';
+        }
+        //$weather->city->lat=3;
+        //var_dump($weather);
+        echo $weather->temperature;
+
         return $this->render('CircuitBundle:circuit:index.html.twig', array(
             'circuits' => $circuits,
+            'weather' => $weather,
+
+
+
+
+        //return $this->render('CircuitBundle:circuit:index.html.twig', array(
+           // 'circuits' => $circuits,
         ));
     }
 
