@@ -27,15 +27,21 @@ class User extends BaseUser
     }
 
 
+  
     /**
      * @var string
      */
     private $name;
 
     /**
-     * @var \ProgressionBundle\Entity\progression
+     * @var \Doctrine\Common\Collections\Collection
      */
-    private $progression;
+    private $progressions;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $users;
 
 
     /**
@@ -62,25 +68,68 @@ class User extends BaseUser
     }
 
     /**
-     * Set progression
+     * Add progressions
      *
-     * @param \ProgressionBundle\Entity\progression $progression
+     * @param \ProgressionBundle\Entity\progression $progressions
      * @return User
      */
-    public function setProgression(\ProgressionBundle\Entity\progression $progression = null)
+    public function addProgression(\ProgressionBundle\Entity\progression $progressions)
     {
-        $this->progression = $progression;
+        $this->progressions[] = $progressions;
 
         return $this;
     }
 
     /**
-     * Get progression
+     * Remove progressions
      *
-     * @return \ProgressionBundle\Entity\progression 
+     * @param \ProgressionBundle\Entity\progression $progressions
      */
-    public function getProgression()
+    public function removeProgression(\ProgressionBundle\Entity\progression $progressions)
     {
-        return $this->progression;
+        $this->progressions->removeElement($progressions);
+    }
+
+    /**
+     * Get progressions
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getProgressions()
+    {
+        return $this->progressions;
+    }
+
+    /**
+     * Add users
+     *
+     * @param \AppBundle\Entity\User $users
+     * @return User
+     */
+    public function addUser(\AppBundle\Entity\User $users)
+    {
+        $this->users[] = $users;
+
+        return $this;
+    }
+
+    /**
+     * Remove users
+     *
+     * @param \AppBundle\Entity\User $users
+     */
+    public function removeUser(\AppBundle\Entity\User $users)
+    {
+        $this->users->removeElement($users);
+    }
+
+    /**
+     * Get users
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getUsers()
+    {
+        return $this->users;
     }
 }

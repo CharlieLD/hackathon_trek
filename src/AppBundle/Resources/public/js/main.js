@@ -30,6 +30,9 @@ function initMap() {
     });
 }
 
+
+// debut code image 3d
+
 ! function ()
 {
     "use strict";
@@ -38,7 +41,7 @@ function initMap() {
     //
     var screen = {};
     (function() {
-        this.elem = document.getElementById("screen"),
+        this.elem = document.getElementById("screen");
             this.width = 0;
         this.height = 0;
         this.resize = function () {
@@ -248,6 +251,3 @@ function initMap() {
     }
     run();
 }();
-
-
-

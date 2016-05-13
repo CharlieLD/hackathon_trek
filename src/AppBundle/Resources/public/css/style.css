@@ -5,14 +5,10 @@ html, body {
     padding: 0;
 }
 
-#map {
-    height: 100%;
-}
-
 body {
-    background: black;
+    background: white;
     color: black;
-    font-family: 'Raleway',Arial,sans-serif;
+    font-family: 'Raleway', Arial, sans-serif;
     font-size: 14px;
     line-height: 24px;
     text-align: center;
@@ -23,9 +19,11 @@ th {
     text-align: center;
     font-size: 20px;
 
+
 }
 td, th {
     padding: 50px;
+    color: black;
 }
 
 td {
@@ -37,14 +35,13 @@ td {
 /* Barre de Nav*/
 
 nav {
-    background-color: transparent;
+    background-color: black;
     height: 60px;
 }
 
 .nav_header ul{
     text-align: center;
     padding-left: 0;
-    background: url("web/bundles/frameworks/images/logo_symfony.png");
 }
 
 .nav_header li{
@@ -64,11 +61,6 @@ body a {
     color: grey;
     text-transform: uppercase;
     letter-spacing: 15px;
-}
-
-.map {
-    height: 800px;
-    width: 800px;
 }
 
 /* animation 3d image */
@@ -133,3 +125,101 @@ body a {
 .face:hover {
     outline: rgba(255,255,255,1) solid 10px !important;
 }
+
+/* FIn animation 3d image */
+select {
+    background: blue;
+}
+
+main {
+    width: 550px;
+    margin: auto;
+}
+label {
+    width: 200px;
+    display: block;
+    float: left;
+}
+
+input, select {
+    box-sizing: border-box;
+    display: block;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 5px 5px 5px  rgba(0,0,0,.075);
+    width: 300px;
+}
+
+input:focus, select:focus {
+    background: #DCF1F7;
+}
+
+.success {
+    border: 1px solid green;
+    background-color: #E3F0DD;
+}
+
+.error {
+    border: 1px solid red;
+    background-color: #F0E1DD;
+}
+
+button[type="submit"] {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    margin-left: 205px;
+    width: 300px;
+}
+
+button[type="submit"]:hover {
+    background-color: #286090;
+    border-color: #204d74;
+}
+
+legend {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+fieldset {
+    border-radius: 10px;
+    border: 1px solid #CCC;
+    box-shadow: 5px 5px 5px rgba(0,0,0, 0.5);
+}
+
+.form_group {
+    padding: 5px;
+}
+.form_group::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.inscription {
+    background: red;
+}
+
+/* debut code performance */
+

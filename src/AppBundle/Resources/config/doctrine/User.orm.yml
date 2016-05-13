@@ -11,11 +11,20 @@ AppBundle\Entity\User:
         name:
             type: string
             length: 255
-    manyToOne:
-        progression:
+    manyToMany:
+        progressions:
             targetEntity: ProgressionBundle\Entity\progression
-            joincolumn:
-                name: progression_id
-                referencedColumnName: id
+            inversedBy: users
+            joinTable:
+                name: users_progressions
+                joinColumns:
+                    user_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    progression_id:
+                        referencedColumnName: id
+        users:
+            targetEntity: User
+            mappedBy: progressions
 
     lifecycleCallbacks: {  }

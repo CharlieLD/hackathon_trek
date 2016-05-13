@@ -1,19 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="nav_header" xmlns="http://www.w3.org/1999/html">
-        <nav>
-            <ul>
-                <li><a href="{{ path("homepage") }}" title="Télécharger">Accueil</a></li>
-                <li><a href="{{ path("circuit_index") }}" title="Télécharger">Circuit</a></li>
-                <li><a href="{{ path("progression_index") }}" title="Télécharger">Parcours</a></li>
-                <li><a href="{{ path("homepage") }}" title="Télécharger">Connexion</a></li>
-            </ul>
-        </nav>
-    </div>
+
     <h1>progression list</h1>
 
-    <table>
+    <canvas id="myChart" width="700" height="700"></canvas>
+
+        <table>
         <thead>
             <tr>
                 <th>Id</th>
@@ -50,4 +43,52 @@
             <a href="{{ path('progression_new') }}">Create a new entry</a>
         </li>
     </ul>
+{% block scripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <script>
+        var global_ctx = document.getElementById("myChart").getContext("2d");
+
+        var options = {
+            responsive: true
+        };
+
+        //        myGlobalChart.generateLegend();
+        var data_spe = {
+            labels: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre"],
+            datasets: [
+                {
+                    label: "My First dataset",
+                    fill: false,
+                    lineTension: 0.1,
+                    backgroundColor: "rgba(75,192,192,0.4)",
+                    borderColor: "rgba(75,192,192,1)",
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: "rgba(75,192,192,1)",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                    pointHoverBorderColor: "rgba(220,220,220,1)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data: [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40],
+                }
+            ]
+        };
+
+
+        var myChart = new Chart(global_ctx).Radar(data_spe, {
+            data: data_spe,
+            options: options
+        });
+    </script>
+
+    {% endblock %}
+
 {% endblock %}
+

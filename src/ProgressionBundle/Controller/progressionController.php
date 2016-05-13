@@ -22,11 +22,20 @@ class progressionController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
+        //$user = $this->get('security.token_storage')->getToken()->getUser();
+
         $progressions = $em->getRepository('ProgressionBundle:progression')->findAll();
 
+        $array_progression = [];
+//        foreach ($progressions as $progression){
+//           // array_push($array_progression, )
+//        }
+        
         return $this->render('ProgressionBundle:progression:index.html.twig', array(
             'progressions' => $progressions,
         ));
+
+
     }
 
     /**
