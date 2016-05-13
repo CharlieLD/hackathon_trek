@@ -132,7 +132,7 @@ select {
 }
 
 main {
-    width: 550px;
+    width: 600px;
     margin: auto;
 }
 label {
@@ -200,12 +200,16 @@ button[type="submit"]:hover {
 legend {
     font-weight: bold;
     text-transform: uppercase;
+    margin: 15px;
+    padding: 10px;
 }
 
 fieldset {
     border-radius: 10px;
     border: 1px solid #CCC;
     box-shadow: 5px 5px 5px rgba(0,0,0, 0.5);
+    margin: 100px;
+    margin-left: 280px;
 }
 
 .form_group {
@@ -217,9 +221,6 @@ fieldset {
     clear: both;
 }
 
-.inscription {
-    background: red;
-}
 
 /* debut code performance */
 
