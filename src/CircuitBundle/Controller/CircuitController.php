@@ -18,6 +18,10 @@ class CircuitController extends Controller
      * Lists all Circuit entities.
      *
      */
+
+
+
+
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
